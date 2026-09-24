@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Artyom Nexvice — Digital Visualizer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="cursor-glow" id="cursorGlow"></div>
+        <div class="grid-bg"></div>
+        <div class="shape shape-1" data-parallax="0.04"></div>
+        <div class="shape shape-2" data-parallax="-0.03"></div>
+        <div class="shape shape-3" data-parallax="0.05"></div>
+
+        <!-- ============ TOPBAR ============ -->
+        <header class="topbar">
+            <div class="brand">
+            <span class="dot"></span>
+            MY PROJECT® SHOWCASE
+            </div>
+            <div class="topbar-right">
+            <nav class="topbar-nav">
+                <a href="#work" data-i18n="nav.work">Work</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+
+            <!-- Language switcher -->
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button id="langEn" data-lang="en" class="active">EN</button>
+                <span class="divider"></span>
+                <button id="langRu" data-lang="ru">RU</button>
+            </div>
+
+            <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                <span id="themeIcon">☾</span>
+            </button>
+            </div>
+        </header>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="wrap">
+            <div class="hero-meta">
+                <span data-i18n="hero.meta.role">Creative Developer</span>
+                <span data-i18n="hero.meta.est">Est. 2020</span>
+                <span data-i18n="hero.meta.available">Available for work</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="line"><span data-i18n="hero.title.1">Digital</span></span>
+                <span class="line"><span><em data-i18n="hero.title.2">craftsman</em></span></span>
+                <span class="line"><span data-i18n="hero.title.3">&amp; visualizer.</span></span>
+            </h1>
+
+            <div class="hero-bottom">
+                <p class="hero-desc" data-i18n-html="hero.desc">
+                I'm <strong>Artyom</strong> — a full-stack developer shaping immersive digital products for brands that refuse to blend in.
+                </p>
+                <div class="scroll-cue">
+                <span data-i18n="hero.scroll">Scroll to explore</span>
+                <span class="bar"></span>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ============ TICKER ============ -->
+        <div class="ticker">
+            <div class="ticker-track" id="tickerTrack">
+            <span data-i18n="ticker.1">WebGL</span><span data-i18n="ticker.2">Interfaces</span><span data-i18n="ticker.3">Brands</span><span data-i18n="ticker.4">Motion</span><span data-i18n="ticker.5">Products</span>
+            <span data-i18n="ticker.1">WebGL</span><span data-i18n="ticker.2">Interfaces</span><span data-i18n="ticker.3">Brands</span><span data-i18n="ticker.4">Motion</span><span data-i18n="ticker.5">Products</span>
+            </div>
+        </div>
+
+        <!-- ============ WORK ============ -->
+        <section id="work">
+            <div class="wrap">
+            <div class="section-head">
+                <h2><span data-i18n="work.title.1">Selected</span> <em data-i18n="work.title.2">work</em></h2>
+                <div class="section-num" data-i18n="work.num">(01) — Projects</div>
+            </div>
+
+            <div class="filters" id="filters">
+                <button class="chip active" data-filter="all" data-i18n="filter.all">All Work</button>
+                <button class="chip" data-filter="med_n_beauty" data-i18n="filter.med_n_beauty">Medicine & beauty</button>
+                <button class="chip" data-filter="commerce" data-i18n="filter.commerce">E‑Commerce</button>
+                <button class="chip" data-filter="b2b" data-i18n="filter.b2b">B2B</button>
+                <button class="chip" data-filter="personal" data-i18n="filter.personal">Personal Templates</button>
+            </div>
+
+            <div class="slider-viewport">
+                <div class="slider-track" id="slider">
+
+                    <article class="slide" data-category="personal">
+                        <a href="https://nekskvik.github.io/seo-agency-redesign/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_seo.png" alt="Vzlet Agency" />
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.7.title">Vzlet Agency</h3>
+                                <span class="slide-cat" data-i18n="project.7.cat">Personal Templates</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="commerce">
+                        <a href="https://deti21vek.ru/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_deti21vek.png" alt="deti21vek" />
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.2.title">Children's play areas</h3>
+                                <span class="slide-cat" data-i18n="project.2.cat">E‑Commerce</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="b2b">
+                        <a href="https://bezvredit.ru/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_disinfection.png" alt="disinfection" />
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.5.title">Disinfection</h3>
+                                <span class="slide-cat" data-i18n="project.5.cat">B2B</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="commerce">
+                        <a href="https://lux-boutique.online/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_lux-boutique.png" alt="lux-boutique" />
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.1.title">Lux Boutique</h3>
+                                <span class="slide-cat" data-i18n="project.1.cat">E‑Commerce</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="med_n_beauty">
+                        <a href="https://magicosmo.ru/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_magicosmo.png" alt="magicosmo"/>
+                            </div>
+                                <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.6.title">MagiCosmo</h3>
+                                <span class="slide-cat" data-i18n="project.6.cat">Medicin & beauty</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="personal">
+                        <a href="https://nekskvik.github.io/pilatec/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_pilatec.png" alt="pilatec" />
+                            </div>
+                                <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.8.title">Pilatec online course</h3>
+                                <span class="slide-cat" data-i18n="project.8.cat">Personal Templates</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="personal">
+                        <a href="https://nekskvik.github.io/flower-store/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_flowers.png" alt="flowers" />
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.9.title">Flora Lab</h3>
+                                <span class="slide-cat" data-i18n="project.9.cat">Personal Templates</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="slide" data-category="med_n_beauty">
+                        <a href="https://dlaser-company.ru/" target="_blank" rel="noopener noreferrer">
+                            <div class="slide-img">
+                                <span class="slide-arrow">↗</span>
+                                <img src="images/project_dlaser.png" alt="dlaser-company" />
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title" data-i18n="project.3.title">Dlaser</h3>
+                                <span class="slide-cat" data-i18n="project.3.cat">Medicin & beauty</span>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <div class="slide-counter">
+                    <b id="currentNum" data-i18n="count.title">Total</b> : <span id="totalNum">08</span>
+                </div>
+                <div class="nav-btns">
+                    <button class="nav-btn" id="prevBtn" aria-label="Previous">←</button>
+                    <button class="nav-btn" id="nextBtn" aria-label="Next">→</button>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about">
+            <div class="wrap">
+            <div class="section-head">
+                <h2><span data-i18n="about.title.1">Давайте</span> <em data-i18n="about.title.2">знакомиться</em></h2>
+                <div class="section-num" data-i18n="about.num">(02) — Studio</div>
+            </div>
+
+            <div class="about-grid">
+                <p class="about-text reveal" data-i18n-html="about.text">
+                I believe the web should feel <em>inevitable</em> — every pixel intentional, every interaction earning its place. For the past six years I've helped studios and startups turn ambitious ideas into products people actually love using.
+                </p>
+
+                <div class="stats reveal">
+                <div class="stat">
+                    <div class="stat-num" data-count="150">0</div>
+                    <div class="stat-label" data-i18n="stat.projects">Projects Shipped</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num" data-count="6">0</div>
+                    <div class="stat-label" data-i18n="stat.years">Years Experience</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="cta" id="contact">
+            <div class="wrap">
+            <h3>
+                <span data-i18n="cta.line1">Let's make</span><br>
+                <span data-i18n="cta.line2">something</span> <em data-i18n="cta.em">great</em>.
+            </h3>
+            <a href="mailto:hello@lumina.studio" class="cta-btn">
+                <span data-i18n="cta.btn">Start a project</span> <span>↗</span>
+            </a>
+            </div>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="wrap">
+            <div class="footer">
+            <div data-i18n="footer.copy">© 2025 Lumina Studio — All rights reserved</div>
+            <div class="footer-socials">
+                <a href="https://t.me/nexvice" target="_blank">Telegram</a>
+                <a href="https://github.com/Nekskvik" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/nexvice/" target="_blank">LinkedIn</a>
+                <a href="https://www.fiverr.com/s/yevNqle" target="_blank">Fiverr</a>
+                <a href="https://hh.ru/resume/8c4a7348ff1122aad80039ed1f6f764f556359?hhtmFrom=vacancy_search_list" target="_blank">HH.RU</a>
+            </div>
+            <div data-i18n="footer.made">Made with intent</div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
